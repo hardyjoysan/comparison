@@ -304,11 +304,6 @@ function _hybridauth_window_process_auth($data) {
         $admin_approval_required = TRUE;
       }
       $account = user_save(drupal_anonymous_user(), $userinfo);
-      $account_uid = $account->uid;
-      $user = user_load($account_uid);
-      $role = user_role_load_by_name("Customer PM");
-      $user->roles = $user->roles + array($role->rid => $role->name);
-      user_save($user);
       // Terminate if an error occurred during user_save().
       if (!$account) {
         drupal_set_message(t('Error saving user account.'), 'error');

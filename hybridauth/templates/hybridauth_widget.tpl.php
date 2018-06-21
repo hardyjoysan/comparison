@@ -1,6 +1,4 @@
-<div class="hybridauth-widget-wrapper">
-<div class="hybridauth-signin-with"><p class="signin-withtext background"><span>OR SIGN IN WITH</span></p></div>
-	<?php
+<div class="hybridauth-widget-wrapper"><?php
   print theme('item_list',
     array(
       'items' => $providers,
