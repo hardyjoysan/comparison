@@ -134,23 +134,13 @@
   /**
    * Provide the HTML to create a nice looking loading progress bar.
    */
-  // Drupal.theme.prototype.CToolsModalThrobber = function () {
-  //   var html = '';
-  //   html += '<div class="loading-spinner" style="width: 100px; height: 40px; margin-top: -20px; position: absolute; z-index: 100000000; top: 45%; left: 50%">';
-  //   html += '  <div class="progress active">';
-  //   html += '    <div class="progress-bar"></div>';
-  //   html += '  </div>';
-  //   html += '</div>';
-
-  //   return html;
-  // };
   Drupal.theme.prototype.CToolsModalThrobber = function () {
     var html = '';
-    html += '  <div id="modal-throbber">';
-    html += '    <div class="modal-throbber-wrapper">';
-    html +=        Drupal.CTools.Modal.currentSettings.throbber;
-    html += '    </div>';
+    html += '<div class="loading-spinner" style="width: 200px; margin: -20px 0 0 -100px; position: absolute; top: 45%; left: 50%">';
+    html += '  <div class="progress progress-striped active">';
+    html += '    <div class="progress-bar" style="width: 100%;"></div>';
     html += '  </div>';
+    html += '</div>';
 
     return html;
   };
